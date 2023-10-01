@@ -1,0 +1,1 @@
+move client/dist app/client

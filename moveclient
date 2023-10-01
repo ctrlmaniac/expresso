@@ -1,0 +1,3 @@
+#!/bin/bash
+
+mv client/dist app/client

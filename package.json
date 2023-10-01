@@ -2,11 +2,13 @@
   "name": "root",
   "private": true,
   "workspaces": [
-    "app",
+    "app/server",
     "client"
   ],
   "scripts": {
-    "watch:app": "npx lerna exec --scope=app npm run watch"
+    "watch:app": "npx lerna exec --scope=server npm run watch",
+    "build": "npx lerna exec --scope=client npm run build",
+    "postbuild": "moveclient"
   },
   "devDependencies": {
     "lerna": "^7.3.0"

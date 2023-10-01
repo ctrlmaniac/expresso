@@ -5,7 +5,9 @@
     "app",
     "client"
   ],
-  "dependencies": {},
+  "scripts": {
+    "watch:app": "npx lerna exec --scope=app npm run watch"
+  },
   "devDependencies": {
     "lerna": "^7.3.0"
   }

@@ -1,1 +1,1 @@
-move client/dist app/client
+move client/dist app/static

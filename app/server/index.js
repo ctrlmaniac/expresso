@@ -1,11 +1,8 @@
-const fs = require("fs");
 const express = require("express");
 const cors = require("cors");
 const path = require("path");
 const bodyParser = require("body-parser");
-
-// Routes
-const helloRouter = require("./routes/hello");
+const findApi = require("./utils/findApi");
 
 // App definition
 const app = express(express.json());
@@ -22,8 +19,8 @@ app.use("/media", express.static(path.join(__dirname, "..", "media")));
 // Client
 app.use(express.static(path.join(__dirname, "..", "client")));
 
-// API or client routes
-app.use("/hello", helloRouter);
+// API
+findApi(app, path.join(__dirname, "api"), "/api");
 
 // Client
 app.get("*", (req, res) => {
